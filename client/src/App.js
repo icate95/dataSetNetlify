@@ -73,7 +73,7 @@ function App() {
     // console.log(data.materie)
 
     function setUrl(e) {
-        window.location.href = window.location.origin + '/' + e.target.getAttribute("aria-label");
+        window.location.href = window.location.origin + '/?page=' + e.target.getAttribute("aria-label");
     }
 
     return (

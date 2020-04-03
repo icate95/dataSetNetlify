@@ -9,7 +9,7 @@ import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "@apollo/react-hooks";
 
 // const client = new ApolloClient({
-//   uri: "http://localhost:4000/graphql"
+//   uri: "http://localhost:9000/graphql"
 // });
 const client = new ApolloClient({
   uri: "/.netlify/functions/graphql"

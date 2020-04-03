@@ -48,8 +48,8 @@ class Content extends React.Component {
     }
 
     componentDidMount() {
-        if (document.getElementById(window.location.href.split('/')[3])) {
-            document.getElementById(window.location.href.split('/')[3]).classList.add('active');
+        if (document.getElementById(window.location.href.split('?page=')[1])) {
+            document.getElementById(window.location.href.split('?page=')[1]).classList.add('active');
         }
         // console.log(this.state)
         this.percentualeCompletamento();
