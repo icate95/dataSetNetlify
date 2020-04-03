@@ -74,6 +74,7 @@ function App() {
 
     function setUrl(e) {
         window.location.href = window.location.origin + '/?page=' + e.target.getAttribute("aria-label");
+        console.log('setUrl');
     }
 
     return (
