@@ -1,11 +1,12 @@
+const { ApolloServer, gql } = require("apollo-server-lambda");
 //import the packages installed in the previous step.
 // We use the cors package because we want to be able to make requests from other origins.
 
 //    npm install --save express apollo-server-express cors
 
-const express = require('express');
-const {ApolloServer, gql} = require('apollo-server-express');
-const cors = require('cors');
+// const express = require('express');
+// const {ApolloServer, gql} = require('apollo-server-express');
+// const cors = require('cors');
 
 let corsi = [
     {
@@ -296,11 +297,14 @@ const resolvers = {
 
 const server = new ApolloServer({typeDefs, resolvers});
 
-const app = express();
-server.applyMiddleware({app});
+// const app = express();
+// server.applyMiddleware({app});
+//
+// app.use(cors());
+//
+// app.listen({port: 4000}, () =>
+//     console.log('Now browse to http://localhost:4000' + server.graphqlPath)
+// );
 
-app.use(cors());
 
-app.listen({port: 4000}, () =>
-    console.log('Now browse to http://localhost:4000' + server.graphqlPath)
-);
+exports.handler = server.createHandler();
