@@ -1,0 +1,199 @@
+/*!
+ * Bootstrap v4.4.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "root";
+@import "reboot";
+@import "type";
+@import "images";
+@import "code";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "input-group";
+@import "custom-forms";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "jumbotron";
+@import "alert";
+@import "progress";
+@import "media";
+@import "list-group";
+@import "close";
+@import "toasts";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "spinners";
+@import "utilities";
+@import "print";
+
+
+$bg: #222831;
+$bg2: #181C22;
+$bg3: #1A1D24;
+$bg4: black;
+$footer-bg: rgba(0, 0, 0, .3);
+$code: #F59BAC;
+$code-text: #FAD7A0;
+$code-text: #FEE6C0;
+$code-comment: #81899B;
+$text-color: #F9FFEE;
+$pale-text: #dfa612;
+$info-box-text: antiquewhite;
+$gs0: rgba(239, 187, 53, 0.6);
+$gs1: rgba(239, 187, 53, 0.6);
+$green1: #EFBB35;
+$green2: #E84279;
+$green3: #dfa612;
+$top1: #302E24;
+$top2: #28313E;
+$subtle-green1: rgba(236, 198, 48, .1);
+$subtle-green2: #1A1D24;
+$subtle-yellow3: rgba(236, 198, 48, .1);
+$fb: #fff;
+$reddit: #fff;
+$h-news: #fff;
+$twitter: #fff;
+$cat-head: #1A1D24;
+$front-text-color: antiquewhite;
+$info-box-bg: #1A1D24;
+
+body {
+  font-family: 'Roboto', sans-serif;
+
+  background: $bg;
+  //background: -moz-linear-gradient(-45deg, rgba(180,110,196,1) 0%, rgba(88,68,94,1) 100%);
+  //background: -webkit-linear-gradient(-45deg, rgba(180,110,196,1) 0%, rgba(88,68,94,1) 100%);
+  //background: linear-gradient(-45deg, rgba(180,110,196,1) 0%, rgba(88,68,94,1) 100%);
+  //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b46ec4",endColorstr="#58445e",GradientType=1);
+}
+
+a, body {
+  color: $text-color;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.bg-dark {
+  color: $text-color;
+}
+
+.bg-light-gray {
+  background: rgb(82, 93, 106);
+  background: -moz-linear-gradient(40deg, rgba(82, 93, 106, 1) 0%, rgba(96, 105, 116, 1) 100%);
+  background: -webkit-linear-gradient(40deg, rgba(82, 93, 106, 1) 0%, rgba(96, 105, 116, 1) 100%);
+  background: linear-gradient(40deg, rgba(82, 93, 106, 1) 0%, rgba(96, 105, 116, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#525d6a", endColorstr="#606974", GradientType=1);
+}
+
+.form-control {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #ced4da;
+  border-radius: inherit;
+}
+
+.btn {
+  border-radius: unset;
+}
+
+.btn-cancella {
+  height: 30px;
+}
+
+//nav corsi
+
+.corsi {
+  .corso {
+    border-bottom: 1px solid white;
+
+    cursor: pointer;
+    -moz-box-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+    place-self: stretch;
+    border: 1px solid rgba(255, 255, 255, .1);
+    -webkit-transition: border .2s ease 0s;
+    transition: border .2s ease 0s;
+    box-shadow: 0 1px 8px 0 rgba(255, 255, 255, .1);
+    text-decoration: none;
+    background-color: transparent;
+
+    &:hover {
+      color: #e6ecf1;
+      //text-decoration: none;
+      //border: 1px solid #e6ecf1;
+      box-shadow: 0 3px 8px 0 rgba(255, 255, 255, .1);
+    }
+
+    &.active {
+      background: rgb(82, 93, 106);
+      background: -moz-linear-gradient(40deg, rgba(82, 93, 106, 1) 0%, rgba(96, 105, 116, 1) 100%);
+      background: -webkit-linear-gradient(40deg, rgba(82, 93, 106, 1) 0%, rgba(96, 105, 116, 1) 100%);
+      background: linear-gradient(40deg, rgba(82, 93, 106, 1) 0%, rgba(96, 105, 116, 1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#525d6a", endColorstr="#606974", GradientType=1);
+    }
+
+    h2 {
+      pointer-events: none;
+    }
+  }
+}
+
+.corso-content {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.btn-danger {
+  background-color: transparent;
+  padding: 0 5px;
+  height: 20px;
+  font-size: 10px;
+  border-radius: 50px;
+  line-height: 0;
+}
+
+.lista-lezioni {
+  span.main-span {
+
+    span {
+      width: 25px;
+      color: rgba(white, .5);
+      margin: 0 7px;
+      text-align: center;
+
+      &:nth-child(3) {
+        width: 25px;
+        border-right: 1px solid white;
+        border-left: 1px solid white;
+      }
+    }
+  }
+}
+
