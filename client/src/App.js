@@ -76,6 +76,7 @@ function App() {
         window.location.href = window.location.origin + '/?page=' + e.target.getAttribute("aria-label");
         console.log('setUrl');
     }
+    console.warn(data)
 
     return (
         <div className="app container-fluid bg">
